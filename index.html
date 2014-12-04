@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>WebCL入門</title>
+<link rel="stylesheet" href="bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+  <h1>Matrix Multiplication</h1>
+  <div class="col-xs-6">
+    <div class="form-group">
+      <label>OpenCL Device</label>
+      <select class="form-control" id="devices"></select>
+    </div>
+    <div class="form-group">
+      <label>Block Size</label>
+      <input type="number" min="1" value="16" class="form-control" id="block-size">
+    </div>
+    <div class="form-group">
+      <label>Scale</label>
+      <input type="number" min="10" step="10" value="10" class="form-control" id="scale">
+    </div>
+    <div class="form-group">
+      <label>Repeat</label>
+      <input type="number" min="1" value="10" class="form-control" id="repeat">
+    </div>
+    <button class="btn btn-lg btn-primary" id="run-button" disabled>Run</button>
+  </div>
+  <div class="col-xs-6">
+    <table class="table table-bordered" id="result">
+      <tr>
+        <th class="col-xs-3">OpenCL Device</th>
+        <th class="col-xs-3">Block Size</th>
+        <th class="col-xs-3">Scale</th>
+        <th class="col-xs-3">Time</th>
+      </tr>
+    </table>
+  </div>
+</div>
+<script src="jquery.min.js"></script>
+<script src="webcl-intro.js"></script>
+</body>
+</html>
